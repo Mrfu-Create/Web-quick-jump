@@ -1,8 +1,8 @@
 // ==UserScript==
-// @name        网站快速跳转工具
-// @namespace   
+// @name        Webquickjump
+// @namespace   https://github.com/Mrfu-Create/Web-quick-jump
 // @version     1.0-alpha
-// @description 按自定义快捷键跳转到指定网站（默认MC百科）
+// @description webquickjump
 // @author      Mrfu_China
 // @match       *://*/*
 // @grant       none
