@@ -1,0 +1,35 @@
+// ==UserScript==
+// @name        网站快速跳转工具
+// @namespace   
+// @version     1.0-alpha
+// @description 按自定义快捷键跳转到指定网站（默认MC百科）
+// @author      Mrfu_China
+// @match       *://*/*
+// @grant       none
+// @license     MIT
+// ==/UserScript==
+
+(function() {
+    'use strict';
+    
+    const config = {
+        target: "https://www.mcmod.cn/",
+        modifiers: {
+            ctrl: true,
+            shift: true,
+            alt: false,
+            meta: false
+        },
+        key: "M"
+    };
+
+    document.addEventListener('keydown', function(e) {
+        if (e.key.toUpperCase() !== config.key.toUpperCase()) return;
+        if (config.modifiers.ctrl !== e.ctrlKey) return;
+        if (config.modifiers.shift !== e.shiftKey) return;
+        if (config.modifiers.alt !== e.altKey) return;
+        if (config.modifiers.meta !== e.metaKey) return;
+        
+        window.location.href = config.target;
+    });
+})();
